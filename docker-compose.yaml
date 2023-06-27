@@ -1,0 +1,12 @@
+services:
+  api:
+    build:
+      context: ./nest-app
+      dockerfile: Dockerfile
+    image: nest-app:1.0.0
+    ports:
+      - 3000:3000
+    volumes:
+      - ./nest-app:/app
+    environment:
+      - token=myvalue
